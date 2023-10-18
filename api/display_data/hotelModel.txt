@@ -1,0 +1,79 @@
+{
+    accommodation_type: 204,
+    accommodation_type_name: "Hotel",
+    address: "789 East Milltown Road"
+    address_trans: "789 East Milltown Road"
+    badges: []
+    block_ids: ['53388808_246121535_4_1_0']
+    bwallet: {hotel_eligibility: 0}
+    cant_book: 0
+    cc1: "us"
+    cc_required: 1
+    checkin: {until: '', from: '15:00'}
+    checkout: {until: '11:00', from: ''}
+    children_not_allowed: 0
+    city: "Wooster (Ohio)"
+    city_in_trans: "in Wooster"
+    city_name_en: "Wooster (Ohio)"
+    city_trans: "Wooster"
+    class: 2
+    class_is_estimated: 0
+    cn_ranking_context: {click_custom_goal: '1', book_custom_goal: '2', et_tag: 'ranking_china_baserank_mobile_rates_boost'}
+    composite_price_breakdown: {excluded_amount: {…}, product_price_breakdowns: Array(1), net_amount: {…}, items: Array(1), gross_amount: {…}, …}
+    country_trans: "United States"
+    countrycode: "us"
+    currency_code: "USD"
+    currencycode: "USD"
+    default_language: "en"
+    default_wishlist_name: "Wooster"
+    distance: "97.31"
+    distance_to_cc: "4.05"
+    distances: [{…}]
+    district: ""
+    district_id: 0
+    districts: ""
+    extended: 0
+    genius_discount_percentage: 0
+    hotel_facilities: "484,108,195,424,103,198,160,452,460,22,109,101,28,457,63,107,456,46,158,420,451,459,80,455,453,8,458,464,110,16,96,423,213,121,186,305,425,488,111,20,189,49,485,2,185,462,450,6,188,301,467,421,211,486,466,135,445,487,212,422,25,163,461,47,436,136,200,433,468,449,454,81,187"
+    hotel_has_vb_boost: 0
+    hotel_id: 533888
+    hotel_name: "Days Inn by Wyndham Wooster"
+    hotel_name_trans: "Days Inn by Wyndham Wooster"
+    id: "property_card_533888"
+    in_best_district: 0
+    is_beach_front: 0
+    is_city_center: 0
+    is_free_cancellable: 1
+    is_genius_deal: 0
+    is_geo_rate: ""
+    is_mobile_deal: 0
+    is_no_prepayment_block: 1
+    is_smart_deal: 0
+    is_wholesaler_candidate: 1
+    latitude: 40.841177
+    longitude: -81.929782
+    main_photo_id: 135465715
+    main_photo_url: "https://cf.bstatic.com/xdata/images/hotel/square60/135465715.jpg?k=f7ebda889f2b8642127c67cb0d345328de0fb62b324abe1aa5fc036eaa56ede8&o="
+    max_1440_photo_url: "https://cf.bstatic.com/xdata/images/hotel/1440x1440/135465715.jpg?k=f7ebda889f2b8642127c67cb0d345328de0fb62b324abe1aa5fc036eaa56ede8&o="
+    max_photo_url: "https://cf.bstatic.com/xdata/images/hotel/max1280x900/135465715.jpg?k=f7ebda889f2b8642127c67cb0d345328de0fb62b324abe1aa5fc036eaa56ede8&o="
+    min_total_price: 75.92625
+    mobile_discount_percentage: 0
+    preferred: 1
+    preferred_plus: 0
+    price_breakdown: {has_tax_exceptions: 0, sum_excluded_raw: '0.00', all_inclusive_price: 75.93, currency: 'USD', gross_price: 75.93, …}
+    price_is_final: 1
+    review_nr: 348
+    review_recommendation: ""
+    review_score: 6.9
+    review_score_word: "Pleasant"
+    ribbon_text: "Breakfast included"
+    selected_review_topic: null
+    soldout: 0
+    timezone: "America/New_York"
+    type: "property_card"
+    ufi: 20101986
+    unit_configuration_label: "<b>Hotel room</b>: 2 beds"
+    url: "https://www.booking.com/hotel/us/days-inn-wooster.html"
+    wishlist_count: 0
+    zip: "OH 44691"
+}
