@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:feature" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="655d44a4-c191-4aaf-9103-254e74b02f24" name="Default Changelist" comment="boiler plate code for booking and payments.&#10;Note these are not working codes and Joshua and akin need to work with frontend and run this">
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tour_Management/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tour_Management/Procfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tour_Management/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tour_Management/build.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tour_Management/db.sqlite3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tour_Management/flight/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tour_Management/flight/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tour_Management/flight/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tour_Management/flight/hotel.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tour_Management/flight/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tour_Management/flight/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tour_Management/flight/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tour_Management/flight/room.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tour_Management/flight/static/css/about.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tour_Management/flight/static/css/book_style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tour_Management/flight/static/css/bookings_style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tour_Management/flight/static/css/contact.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tour_Management/flight/static/css/layout_style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tour_Management/flight/static/css/payment_process_style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tour_Management/flight/static/css/payment_style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tour_Management/flight/static/css/privacy-policy.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tour_Management/flight/static/css/search2_style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tour_Management/flight/static/css/search_style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tour_Management/flight/static/css/styles2.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tour_Management/flight/static/img/about-us-cms.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tour_Management/flight/static/img/about-us.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tour_Management/flight/static/img/card.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tour_Management/flight/static/img/contactbg.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tour_Management/flight/static/img/destination.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tour_Management/flight/static/img/destination/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tour_Management/flight/static/img/destination/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tour_Management/flight/static/img/destination/3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tour_Management/flight/static/img/destination/4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tour_Management/flight/static/img/destination/5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tour_Management/flight/static/img/destination/6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tour_Management/flight/static/img/earth.jfif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tour_Management/flight/static/img/evening_active.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tour_Management/flight/static/img/evening_inactive.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tour_Management/flight/static/img/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tour_Management/flight/static/img/flight_icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tour_Management/flight/static/img/icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tour_Management/flight/static/img/icon_logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tour_Management/flight/static/img/icon_logo_white-outline.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tour_Management/flight/static/img/logo.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tour_Management/flight/static/img/morning_active.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tour_Management/flight/static/img/morning_inactive.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tour_Management/flight/static/img/newsletter.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tour_Management/flight/static/img/night_active.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tour_Management/flight/static/img/night_inactive.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tour_Management/flight/static/img/noon_active.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tour_Management/flight/static/img/noon_inactive.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tour_Management/flight/static/img/place/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tour_Management/flight/static/img/place/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tour_Management/flight/static/img/place/3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tour_Management/flight/static/img/place/4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tour_Management/flight/static/img/place/5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tour_Management/flight/static/img/place/6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tour_Management/flight/static/img/plane3.1.jfif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tour_Management/flight/static/img/plane3.1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tour_Management/flight/static/img/plane3.12.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tour_Management/flight/static/img/plane3.jfif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tour_Management/flight/static/img/plane4.jfif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tour_Management/flight/static/img/privacy-policy.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tour_Management/flight/static/img/process.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tour_Management/flight/static/img/sky.jfif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tour_Management/flight/static/img/terms-and-conditions.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tour_Management/flight/static/js/book.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tour_Management/flight/static/js/bookings.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tour_Management/flight/static/js/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tour_Management/flight/static/js/layout.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tour_Management/flight/static/js/payment_process.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tour_Management/flight/static/js/search.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tour_Management/flight/static/js/search2.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tour_Management/flight/static/js/signin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tour_Management/flight/static/js/signup.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tour_Management/flight/templates/demo/booking.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tour_Management/flight/templates/demo/demo_form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tour_Management/flight/templates/demo/get_details_accommodation.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tour_Management/flight/templates/demo/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tour_Management/flight/templates/demo/payment_acd.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tour_Management/flight/templates/demo/results.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tour_Management/flight/templates/demo/rooms_per_hotel.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tour_Management/flight/templates/flight/about.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tour_Management/flight/templates/flight/base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tour_Management/flight/templates/flight/book.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tour_Management/flight/templates/flight/bookings.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tour_Management/flight/templates/flight/checkout.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tour_Management/flight/templates/flight/contact.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tour_Management/flight/templates/flight/first_page.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tour_Management/flight/templates/flight/flight_booking.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tour_Management/flight/templates/flight/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tour_Management/flight/templates/flight/layout.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tour_Management/flight/templates/flight/layout2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tour_Management/flight/templates/flight/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tour_Management/flight/templates/flight/payment.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tour_Management/flight/templates/flight/payment_process.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tour_Management/flight/templates/flight/privacy-policy.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tour_Management/flight/templates/flight/register.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tour_Management/flight/templates/flight/search.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tour_Management/flight/templates/flight/terms.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tour_Management/flight/templates/flight/ticket.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tour_Management/flight/templates/flight/trav.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tour_Management/flight/templates/itinerary/home_iti.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tour_Management/flight/templates/itinerary/response_iti.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tour_Management/flight/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tour_Management/flight/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tour_Management/flight/utils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tour_Management/flight/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tour_Management/manage.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tour_Management/requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tour_Management/runtime.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tour_Management/tripmaster/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tour_Management/tripmaster/asgi.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tour_Management/tripmaster/settings.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tour_Management/tripmaster/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tour_Management/tripmaster/utils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tour_Management/tripmaster/wsgi.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/.flaskenv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/app.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/display_data/hotelModel.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/display_data/hotels.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/requirements.txt" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="feature/TMS-32" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="2WDhNac1RjneX9YATewlXHeUFz9" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\vibha\OneDrive\Pictures\tour_management_backend" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="655d44a4-c191-4aaf-9103-254e74b02f24" name="Default Changelist" comment="" />
+      <created>1696273019054</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1696273019054</updated>
+    </task>
+    <task id="LOCAL-00001" summary="/hotels api create">
+      <created>1696273234006</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1696273234006</updated>
+    </task>
+    <task id="LOCAL-00002" summary="/hotels api create">
+      <created>1696273318187</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1696273318187</updated>
+    </task>
+    <task id="LOCAL-00003" summary="/hotels api create">
+      <created>1697569679368</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1697569679368</updated>
+    </task>
+    <task id="LOCAL-00004" summary="boiler plate code for booking and payments.&#10;Note these are not working codes and Joshua and akin need to work with frontend and run this">
+      <created>1697664071541</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1697664071541</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="/hotels api create" />
+    <MESSAGE value="boiler plate code for booking and payments.&#10;Note these are not working codes and Joshua and akin need to work with frontend and run this" />
+    <option name="LAST_COMMIT_MESSAGE" value="boiler plate code for booking and payments.&#10;Note these are not working codes and Joshua and akin need to work with frontend and run this" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1697664127392">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1697664127392" />
+    <state x="478" y="145" width="579" height="534" key="find.popup" timestamp="1697898127893">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="478" y="145" width="579" height="534" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1697898127893" />
+  </component>
+</project>
