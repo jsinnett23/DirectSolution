@@ -1,0 +1,139 @@
+{#{% extends 'flight/layout.html' %}#}
+
+{% load static %}
+
+{% block head %}
+    <title>Payment | Trip Master</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="{% static 'css/payment_style.css' %}">
+{% endblock %}
+
+{% block body %}
+    <style>
+    .w3-container {
+        font-size: 14px;
+    }
+
+    .center {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #F9FAFB;
+        padding: 20px;
+    }
+
+    .w3-card-4 {
+        width: 400px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .w3-container {
+        padding: 20px;
+    }
+
+    .payment-btn {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .btn-primary {
+        background-color: #007bff;
+        color: #fff;
+    }
+
+    .btn-primary:hover {
+        background-color: #0069d9;
+        color: #fff;
+    }
+
+    .btn-danger {
+        background-color: #dc3545;
+        color: #fff;
+    }
+
+    .btn-danger:hover {
+        background-color: #c82333;
+        color: #fff;
+    }
+</style>
+
+         <form action="{% url 'payment' %}" method="POST">
+            {% csrf_token %}
+             <style>
+                .w3-container {
+                    font-size: 14px;
+                }
+
+                .center {
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                }
+            </style>
+            <div class="center">
+                <input type="hidden" name="ticket" value="{{ticket}}" required>
+                <input type="hidden" name="offer_id" value="{{offer_id}}" required>
+            <h3 class="Payment Gateway">
+                <div class="w3-card-4">
+
+                    <header class="w3-container w3-blue">
+                        <h1>Payment Gateway</h1>
+                    </header>
+
+                    <div class="w3-container"><br/>
+{#                        <p>Booked I</p>#}
+
+                        <!-- PAYPAL BUTTONS HERE  -->
+
+                        <div id="paypal-button-container"></div>
+
+                        <!-- Include the PayPal JavaScript SDK -->
+                        <script
+                            src="https://www.paypal.com/sdk/js?client-id=AXtPKtQij_AvbXZ1pPQlpqaF7CnMK4WqXrBQAsguecBMzdG7XHUZtZCqy0AwmKASNN0IjecIBJBd4WV2&currency=USD">
+                        </script>
+
+                        <script>
+                            // Render the PayPal button into #paypal-button-container
+                            paypal.Buttons({
+
+                                // Set up the transaction
+                                createOrder: function (data, actions) {
+                                    return actions.order.create({
+                                        purchase_units: [{
+                                            amount: {
+                                                value: {{ fare }}
+                                            }
+                                        }]
+                                    });
+                                },
+
+                                // Finalize the transaction
+                                onApprove: function (data, actions) {
+                                    return actions.order.capture().then(function (details) {
+                                        // Show a success message to the buyer
+                                        alert('Transaction completed by ' + details.payer.name
+                                            .given_name + '!');
+                                        document.getElementById("payment_btn").click();
+                                    });
+
+                                }
+
+
+                            }).render('#paypal-button-container');
+                        </script>
+
+                    </div>
+
+            </div>
+            <div class="payment-btn">
+                <button id="payment_btn" hidden class="btn btn-primary btn-danger">Make payment</button>
+            </div>
+            </h3>
+            </div>
+        </form>
+
+{% endblock %}

@@ -1,0 +1,57 @@
+{% extends 'flight/layout.html' %}
+{% load static %}
+{% block head %}
+    <title>Home | Select</title>
+{#    <script type="text/javascript" src="{% static 'js/index.js' %}"></script>#}
+{#    <link rel="shortcut icon" type="image/x-icon" href="{% static 'assets/img/favicon.png' %}">#}
+{#    <meta charset="utf-8">#}
+{#    <meta http-equiv="x-ua-compatible" content="ie=edge">#}
+{#    <title>Trip Master | Login/Register</title>#}
+{#    <meta name="description" content="">#}
+{#    <meta name="viewport" content="width=device-width, initial-scale=1">#}
+{#    <!-- Bootstrap CSS -->#}
+{#    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">#}
+{#    <!-- Icon Font CSS -->#}
+{#    <link rel="stylesheet" href="{% static 'assets/css/icons.min.css' %}">#}
+{#    <!-- Plugins CSS -->#}
+{#    <link rel="stylesheet" href="{% static 'assets/css/plugins.css' %}">#}
+{#    <!-- Main Style CSS -->#}
+{#    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">#}
+{% endblock head %}
+
+
+
+{% block body %}
+
+{#                <form action="flight_book" method="post">#}
+{#                    {% csrf_token %}#}
+                    <div class="button-box">
+                            <a href = "flight_book"><button type="submit"><span>Flight</span></button></a>
+                            <br/>
+                            <a href = "flight_book"><button type="submit"><span>Accomodation</span></button></a>
+                        </div>
+
+
+{#                </form>#}
+
+
+
+{##}
+{#<script src="{% static 'assets/js/vendor/modernizr-3.11.7.min.js' %}"></script>#}
+{#<script src="{% static 'assets/js/vendor/jquery-v3.6.0.min.js' %}"></script>#}
+{#<script src="{% static 'assets/js/vendor/jquery-migrate-v3.3.2.min.js' %}"></script>#}
+{#<script src="{% static 'assets/js/vendor/popper.min.js' %}"></script>#}
+{#<script src="{% static 'assets/js/vendor/bootstrap.min.js' %}"></script>#}
+{#<script src="{% static 'assets/js/plugins.js' %}"></script>#}
+{#<!-- Ajax reg-->#}
+{#<script src="{% static 'assets/js/ajax-mail.js' %}"></script>#}
+{#<script src="{% static 'assets/js/ajax-reg.js' %}"></script>#}
+{#<script src="{% static 'assets/js/ajax-address.js' %}"></script>#}
+{#<script src="{% static 'assets/js/ajax-login.js' %}"></script>#}
+{#<script src="{% static 'assets/js/ajax-product.js' %}"></script>#}
+{#<script src="{% static 'assets/js/ajax-del.js' %}"></script>#}
+{#<!-- Main JS -->#}
+{#<script src="{% static 'assets/js/main.js' %}"></script>#}
+
+{% endblock%}
+

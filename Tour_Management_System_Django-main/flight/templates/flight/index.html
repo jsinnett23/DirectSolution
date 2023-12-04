@@ -1,0 +1,625 @@
+{% extends 'flight/layout.html' %}
+{% load static %}
+{% block head %}
+    <title>Home | Login</title>
+    <script type="text/javascript" src="{% static 'js/index.js' %}"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'assets/img/favicon.png' %}">
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Trip Master | Login/Register</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+    <!-- Icon Font CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/icons.min.css' %}">
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/plugins.css' %}">
+    <!-- Main Style CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Trip Master | Home </title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'assets/img/favicon.png'%}">
+
+    <!-- CSS
+	============================================ -->
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+    <!-- Icon Font CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/icons.min.css' %}">
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/plugins.css' %}">
+    <!-- Main Style CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+
+    <style>
+
+       /* Reset some default styles */
+        body, h1, h2, h3, p, button {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            font-size: 16px;
+        }
+
+        /* Header Styles */
+        .landing-hero {
+            height: 100vh;
+            background-image: url("https://static.independent.co.uk/s3fs-public/thumbnails/image/2019/10/15/09/istock-483629308.jpg?width=982&height=726&auto=webp&quality=75");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+
+        .headline {
+            font-size: 2.5rem;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        .text-primary {
+            color: #007bff;
+        }
+
+        .landing-content {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 5vh;
+        }
+
+        /* Content Section Styles */
+        .lead {
+            font-size: 1.25rem;
+            line-height: 1.5;
+            margin-bottom: 1.5rem;
+            color: white;
+        }
+
+        /* Ratings and Descriptions */
+        .rating {
+            font-size: 1rem;
+            color: #ccc;
+        }
+
+        /* Button Styles */
+        .btn {
+            border-radius: 2rem;
+            padding: 0.75rem 2rem;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            color: white;
+        }
+
+        /* Testimonial Styles */
+        .support-wrap {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .testimonial-card {
+            background-color: #f8f8f8;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 0 10px 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 45%; /* Adjust width as needed */
+        }
+
+        .testimonial-card .lead {
+            color: #333;
+        }
+
+        .testimonial-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: #007bff;
+        }
+
+        .testimonial-card p {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .testimonial-card .rating {
+            font-size: 1rem;
+            font-weight: bold;
+            color: #28a745; /* Green color for ratings */
+        }
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .headline {
+                font-size: 2rem;
+            }
+
+            .lead {
+                width: 100%;
+            }
+            .testimonial-card {
+                max-width: 100%;
+                display: block;
+            }
+        }
+    </style>
+
+{% endblock head %}
+
+{% block body %}
+<header class="header-area header-padding-1 sticky-bar header-res-padding clearfix ">
+    <div class="container-fluid">
+{#        <div class="row">#}
+{#            <div class="col-xl-2 col-lg-2 col-md-6 col-4">#}
+{#                <div class="logo">#}
+{#                    <a href="index">#}
+{#                        <img src="{% static 'assets/img/logo/logo.jpg' %}" alt="" width="120" height="55" >#}
+{#                    </a>#}
+{#                </div>#}
+{#            </div>#}
+{#            <div class="col-xl-8 col-lg-8 d-none d-lg-block">#}
+{#                <div class="main-menu">#}
+{#                    <nav>#}
+{#                        <ul>#}
+{#                            <li><a href="index.html">Home </a>#}
+{##}
+{#                            <!-- <li><a href="shop-grid-fw.php"> Shop </a></li> -->#}
+{##}
+{#                            <!-- <li><a href="shop-grid-fw.php">Collection</a></li> -->#}
+{##}
+{#                            <!-- <li><a href="blog-no-sidebar.html">Deals </a></li>#}
+{#                                 -->#}
+{#                          #}
+{#                            <li><a href="about.html"> About </a></li>#}
+{#                            <li><a href="contact"> Contact</a></li>#}
+
+{#                        </ul>#}
+{#                    </nav>#}
+{#                </div>#}
+{#            </div>#}
+{#            <div class="col-xl-2 col-lg-2 col-md-6 col-8">#}
+{#                   <div class="header-right-wrap">#}
+{#                    <div class="same-style header-search">#}
+{#                        <a class="search-active" href="#"><i class="pe-7s-search"></i></a>#}
+{#                        <div class="search-content">#}
+{#                            <form action="#">#}
+{#                                <input type="text" placeholder="Search" />#}
+{#                                <button class="button-search"><i class="pe-7s-search"></i></button>#}
+{#                            </form>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                    <div class="same-style account-satting">#}
+{#                        <a class="account-satting-active" href="#"><i class="pe-7s-users"></i></a>#}
+{#                        <div class="account-dropdown">#}
+{#                            <ul>#}
+{#                                <li><a href="login_page">Login</a></li>#}
+{#                                <li><a href="login-register.html">Register</a></li>#}
+{##}
+{##}
+{#                            </ul>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                    <!-- <div class="same-style header-wishlist">#}
+{#                        <a href="#"><i class="pe-7s-like"></i></a>#}
+{#                    </div>#}
+{#                        <div class="same-style cart-wrap">#}
+{#                        <button class="icon-cart">#}
+{#                            <i class="pe-7s-shopbag"></i>#}
+{#                            <span class="count-style">02</span>#}
+{#                        </button>#}
+{#                            <div class="shopping-cart-content">#}
+{#                            <div class="shopping-cart-btn btn-hover text-center">#}
+{#                                <a class="default-btn" href="cart-page.php">view cart</a>#}
+{##}
+{#                            </div>#}
+{#                        </div>#}
+{#                    </div>  -->#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+        <div class="mobile-menu-area">
+            <div class="mobile-menu">
+                <nav id="mobile-menu-active">
+                    <ul class="menu-overflow">
+                        <li><a href="index.html">HOME</a>
+
+                                </li>
+
+
+                            </ul>
+                        </li>
+                        <li><a href="shop-grid-fw.php">Shop</a>
+
+                                </li>
+
+                            </ul>
+                        </li>
+                        <li><a href="shop.html">Collection</a></li>
+
+                        <li><a href="l">Blog</a>
+
+                        </li>
+                        <li><a href="about.html">About us</a></li>
+                        <li><a href="contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- <div class="landing-hero">
+    <div class="container">
+        <h1 class="mb-5 headline">
+            Unleash the Explorer in You <br /> with <span class="text-primary">Trip Masters</span>
+        </h1>
+
+    <section class="landing-content">
+        <div class="container my-5">
+            <p class="lead" style="color: white;">
+                Your gateway to hassle-free travel planning. With our app, you can embark on your next adventure with ease. Craft and share your unique tour plans, unlock exclusive deals, and harness the power of our extensive partner network for unforgettable journeys.
+            </p>
+            <p class="lead" style="color: white;">
+                At <span class="text-primary" style="color: #007bff;">Trip Masters</span>, we're on a mission to redefine your travel experiences. Our commitment is to provide you with a revolutionary, cost-effective solution that transforms your vacation dreams into unforgettable realities. Your dream vacation, your way – we make it possible.
+            </p>
+
+            <button class="btn btn-outline-dark" style="border-radius: 25rem; background-color: white; color: black;" onclick="window.location.href = '/login';">
+                Explore
+            </button>
+        </div>
+    </section>
+<section class="landing-content">
+  <div class="support-wrap mb-30 support-2">
+      <div class="container my-5">
+    <h3 class="mb-5 headline">New York City</h3>
+    <p class="lead" style="color: white;">Exploring New York City was an incredible experience. The bustling streets, iconic landmarks, and diverse culture make it a must-visit destination. Rated it 5 stars!</p>
+    <p class="lead" style="color: white;">Rating: 5</p>
+  </div>
+
+  <div class="lead">
+    <h3 class="mb-5 headline">Paris</h3>
+    <p class="lead" style="color: white;">Paris, the city of love, lived up to its reputation. The charming streets, delicious cuisine, and the Eiffel Tower at night were unforgettable. A solid 4.5 stars!</p>
+    <p class="lead" style="color: white;">Rating: 4.5</p>
+  </div>
+
+  <div class="lead">
+    <h3 class="mb-5 headline">Tokyo</h3>
+    <p class="lead" style="color: white;">Tokyo is a vibrant metropolis with a perfect blend of tradition and modernity. The sushi, cherry blossoms, and friendly locals made my trip memorable. Rated it 4 stars!</p>
+    <p class="lead" style="color: white;">Rating: 4</p>
+  </div>
+
+  <div class="lead">
+    <h3 class="mb-5 headline">Rio de Janeiro</h3>
+    <p class="lead" style="color: white;">Visiting Rio de Janeiro was a dream come true. The beautiful beaches, lively samba music, and the iconic Christ the Redeemer statue were highlights. Rated it 4.7 stars!</p>
+    <p class="lead" style="color: white;">Rating: 4.7</p>
+  </div>
+      </div>
+</div>
+</section> -->
+
+<div class="landing-hero">
+    <div class="container">
+        <h1 class="mb-5 headline">
+            Unleash the Explorer in You <br /> with <span class="text-primary">Trip Masters</span>
+        </h1>
+
+        <section class="landing-content">
+            <div class="container my-5">
+                <p class="lead">
+                    Your gateway to hassle-free travel planning. With our app, you can embark on your next adventure with ease. Craft and share your unique tour plans, unlock exclusive deals, and harness the power of our extensive partner network for unforgettable journeys.
+                </p>
+                <p class="lead">
+                    At <span class="text-primary">Trip Masters</span>, we're on a mission to redefine your travel experiences. Our commitment is to provide you with a revolutionary, cost-effective solution that transforms your vacation dreams into unforgettable realities. Your dream vacation, your way – we make it possible.
+                </p>
+
+                <button class="btn btn-primary" onclick="window.location.href = '/login';">
+                    Explore
+                </button>
+            </div>
+        </section>
+    </div>
+</div>
+
+<div class="landing-content">
+    <div class="container my-5">
+        <div class="support-wrap mb-30 support-2">
+            <!-- Testimonial Card 1 -->
+            <div class="testimonial-card">
+                <div class="lead">
+                    <h3 class="mb-5 headline">New York City</h3>
+                    <p class="lead">Exploring New York City was an incredible experience. The bustling streets, iconic landmarks, and diverse culture make it a must-visit destination. Rated it 5 stars!</p>
+                    <p class="rating">Rating: 5</p>
+                </div>
+            </div>
+
+            <!-- Testimonial Card 2 -->
+            <div class="testimonial-card">
+                <div class="lead">
+                    <h3 class="mb-5 headline">Paris</h3>
+                    <p class="lead">Paris, the city of love, lived up to its reputation. The charming streets, delicious cuisine, and the Eiffel Tower at night were unforgettable. A solid 4.5 stars!</p>
+                    <p class="rating">Rating: 4.5</p>
+                </div>
+            </div>
+
+            <!-- Testimonial Card 3 -->
+            <div class="testimonial-card">
+                <div class="lead">
+                    <h3 class="mb-5 headline">Tokyo</h3>
+                    <p class="lead">Tokyo is a vibrant metropolis with a perfect blend of tradition and modernity. The sushi, cherry blossoms, and friendly locals made my trip memorable. Rated it 4 stars!</p>
+                    <p class="rating">Rating: 4</p>
+                </div>
+            </div>
+
+            <!-- Testimonial Card 4 -->
+            <div class="testimonial-card">
+                <div class="lead">
+                    <h3 class="mb-5 headline">Rio de Janeiro</h3>
+                    <p class="lead">Visiting Rio de Janeiro was a dream come true. The beautiful beaches, lively samba music, and the iconic Christ the Redeemer statue were highlights. Rated it 4.7 stars!</p>
+                    <p class="rating">Rating: 4.7</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{#<footer class="footer-area bg-purple pt-100 pb-70">#}
+{#    <div class="container">#}
+{#        <div class="row">#}
+{#            <div class="col-lg-2 col-md-4 col-sm-4">#}
+{#                <div class="copyright mb-30">#}
+{#                    <div class="footer-logo">#}
+{#                        <a href="index.html">#}
+{#                            <img src="{% static 'assets/img/logo/logo.jpg' %}" alt="" width="120" height="55" >#}
+{#                        </a>#}
+{#                    </div>#}
+{#                    <p>© 2023 <a href="#">TourMate</a>.<br> All Rights Reserved</p>#}
+{#                </div>#}
+{#            </div>#}
+{#            <div class="col-lg-2 col-md-4 col-sm-4">#}
+{#                <div class="footer-widget mb-30 ml-30">#}
+{#                    <div class="footer-title">#}
+{#                        <h3>ABOUT US</h3>#}
+{#                    </div>#}
+{#                    <div class="footer-list">#}
+{#                        <ul>#}
+{#                            <li><a href="about.html">About us</a></li>#}
+{#                            <li><a href="contact">Store location</a></li>#}
+{#                            <li><a href="contact">Contact</a></li>#}
+{##}
+{#                        </ul>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
+{#            <div class="col-lg-2 col-md-4 col-sm-4">#}
+{#                <div class="footer-widget mb-30 ml-50">#}
+{#                    <div class="footer-title">#}
+{#                        <h3>USEFUL LINKS</h3>#}
+{#                    </div>#}
+{#                    <div class="footer-list">#}
+{#                        <ul>#}
+{##}
+{#                            <li><a href="about.html">Support Policy</a></li>#}
+{##}
+{#                            <li><a href="about.html">FAQs</a></li>#}
+{#                        </ul>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
+{#            <div class="col-lg-2 col-md-6 col-sm-6">#}
+{#                <div class="footer-widget mb-30 ml-75">#}
+{#                    <div class="footer-title">#}
+{#                        <h3>FOLLOW US</h3>#}
+{#                    </div>#}
+{#                    <div class="footer-list">#}
+{#                        <ul>#}
+{#                            <li><a href="#">Facebook</a></li>#}
+{#                            <li><a href="#">Twitter</a></li>#}
+{#                            <li><a href="#">Instagram</a></li>#}
+{#                            <li><a href="#">Youtube</a></li>#}
+{#                        </ul>#}
+
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
+{#            <div class="col-lg-4 col-md-6 col-sm-6">#}
+{#                <div class="footer-widget mb-30 ml-70">#}
+{#                    <div class="footer-title">#}
+{#                        <h3>SUBSCRIBE</h3>#}
+{#                    </div>#}
+{#                    <div class="subscribe-style">#}
+{#                        <p>Get E-mail updates about our latest shop and special offers.</p>#}
+{#                        <div id="mc_embed_signup" class="subscribe-form">#}
+{#                            <form action="subscribe.html" method="get" target="_blank">#}
+{#                                <div id="mc_embed_signup_scroll" class="mc-form">#}
+{#                                    <input class="email" type="email" required="" placeholder="Enter your email here.." name="EMAIL" value="">#}
+{#                                    <div class="mc-news" aria-hidden="true">#}
+{#                                        <input type="text" value="" tabindex="-1" name="b_6bbb9b6f5827bd842d9640c82_05d85f18ef">#}
+{#                                    </div>#}
+{#                                    <div class="clear">#}
+{#                                        <input id="mc-embedded-subscribe" class="button" type="submit" name="subscribe" value="subscribe" >#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                            </form>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+{#    </div>#}
+{#</footer>#}
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-5 col-sm-12 col-xs-12">
+                        <div class="tab-content quickview-big-img">
+                            <div id="pro-1" class="tab-pane fade show active">
+                                <img src="{% static 'assets/img/product/quickview-l1.jpg' %}" alt="">
+                            </div>
+                            <div id="pro-2" class="tab-pane fade">
+                                <img src="{% static 'assets/img/product/quickview-l2.jpg' %}" alt="">
+                            </div>
+                            <div id="pro-3" class="tab-pane fade">
+                                <img src="{% static 'assets/img/product/quickview-l3.jpg' %}" alt="">
+                            </div>
+                            <div id="pro-4" class="tab-pane fade">
+                                <img src="{% static 'assets/img/product/quickview-l2.jpg' %}" alt="">
+                            </div>
+                        </div>
+                        <!-- Thumbnail Large Image End -->
+                        <!-- Thumbnail Image End -->
+                        <div class="quickview-wrap mt-15">
+                            <div class="quickview-slide-active owl-carousel nav nav-style-1" role="tablist">
+                                <a class="active" data-bs-toggle="tab" href="#pro-1"><img src="{% static 'assets/img/product/quickview-s1.jpg' %}" alt=""></a>
+                                <a data-bs-toggle="tab" href="#pro-2"><img src="{% static 'assets/img/product/quickview-s2.jpg' %}" alt=""></a>
+                                <a data-bs-toggle="tab" href="#pro-3"><img src="{% static 'assets/img/product/quickview-s3.jpg' %}" alt=""></a>
+                                <a data-bs-toggle="tab" href="#pro-4"><img src="{% static 'assets/img/product/quickview-s2.jpg' %}" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-7 col-sm-12 col-xs-12">
+                        <div class="product-details-content quickview-content">
+                            <h2>Products Name Here</h2>
+                            <div class="product-details-price">
+                                <span>$18.00 </span>
+                                <span class="old">$20.00 </span>
+                            </div>
+                            <div class="pro-details-rating-wrap">
+                                <div class="pro-details-rating">
+                                    <i class="fa fa-star-o yellow"></i>
+                                    <i class="fa fa-star-o yellow"></i>
+                                    <i class="fa fa-star-o yellow"></i>
+                                    <i class="fa fa-star-o"></i>
+                                    <i class="fa fa-star-o"></i>
+                                </div>
+                                <span>3 Reviews</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisic elit eiusm tempor incidid ut labore et dolore magna aliqua. Ut enim ad minim venialo quis nostrud exercitation ullamco</p>
+                            <div class="pro-details-list">
+                                <ul>
+                                    <li>- 0.5 mm Dail</li>
+                                    <li>- Inspired vector icons</li>
+                                    <li>- Very modern style  </li>
+                                </ul>
+                            </div>
+                            <div class="pro-details-size-color">
+                                <div class="pro-details-color-wrap">
+                                    <span>Color</span>
+                                    <div class="pro-details-color-content">
+                                        <ul>
+                                            <li class="blue"></li>
+                                            <li class="maroon active"></li>
+                                            <li class="gray"></li>
+                                            <li class="green"></li>
+                                            <li class="yellow"></li>
+                                            <li class="white"></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="pro-details-size">
+                                    <span>Size</span>
+                                    <div class="pro-details-size-content">
+                                        <ul>
+                                            <li><a href="#">s</a></li>
+                                            <li><a href="#">m</a></li>
+                                            <li><a href="#">l</a></li>
+                                            <li><a href="#">xl</a></li>
+                                            <li><a href="#">xxl</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pro-details-quality">
+                                <div class="cart-plus-minus">
+                                    <input class="cart-plus-minus-box" type="text" name="qtybutton" value="2">
+                                </div>
+                                <div class="pro-details-cart btn-hover">
+                                    <a href="#">Add To Cart</a>
+                                </div>
+                                <div class="pro-details-wishlist">
+                                    <a href="#"><i class="fa fa-heart-o"></i></a>
+                                </div>
+                                <div class="pro-details-compare">
+                                    <a href="#"><i class="pe-7s-shuffle"></i></a>
+                                </div>
+                            </div>
+                            <div class="pro-details-meta">
+                                <span>Categories :</span>
+                                <ul>
+                                    <li><a href="#">Minimal,</a></li>
+                                    <li><a href="#">Furniture,</a></li>
+                                    <li><a href="#">Fashion</a></li>
+                                </ul>
+                            </div>
+                            <div class="pro-details-meta">
+                                <span>Tag :</span>
+                                <ul>
+                                    <li><a href="#">Fashion, </a></li>
+                                    <li><a href="#">Furniture,</a></li>
+                                    <li><a href="#">Electronic</a></li>
+                                </ul>
+                            </div>
+                            <div class="pro-details-social">
+                                <ul>
+                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-pinterest-p"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal end -->
+
+
+
+
+
+
+
+
+
+<!-- All JS is here
+============================================ -->
+
+<script src="{% static 'assets/js/vendor/modernizr-3.11.7.min.js' %}"></script>
+<script src="{% static 'assets/js/vendor/jquery-v3.6.0.min.js' %}"></script>
+<script src="{% static 'assets/js/vendor/jquery-migrate-v3.3.2.min.js' %}"></script>
+<script src="{% static 'assets/js/vendor/popper.min.js' %}"></script>
+<script src="{% static 'assets/js/vendor/bootstrap.min.js' %}"></script>
+<script src="{% static 'assets/js/plugins.js' %}"></script>
+<!-- Ajax Mail -->
+<script src="{% static 'assets/js/ajax-mail.js' %}"></script>
+<script src="{% static 'assets/js/ajax-acc.js' %}"></script>
+<script src="{% static 'assets/js/ajax-reg.js' %}"></script>
+<!-- Main JS -->
+<script src="{% static 'assets/js/main.js' %}"></script>
+{% endblock%}

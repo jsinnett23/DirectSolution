@@ -1,0 +1,445 @@
+{% extends 'flight/layout.html' %}
+{% load static %}
+{% block head %}
+    <title>Home | Login</title>
+    <script type="text/javascript" src="{% static 'js/index.js' %}"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'assets/img/favicon.png' %}">
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Trip Master | Login/Register</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+    <!-- Icon Font CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/icons.min.css' %}">
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/plugins.css' %}">
+    <!-- Main Style CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+
+    <style>
+        /* Reset some default browser styles */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Center the login form vertically and horizontally */
+        .login {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f2f2f2;
+        }
+
+        /* Style the card containing the login form */
+        .card-body {
+            padding: 20px; /* Adjusted padding */
+            margin: 20px; /* Adjusted margin */
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            width: 400px; /* Set a specific width */
+        }
+
+        /* Style the form title */
+        h3 {
+            text-align: center;
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        /* Style form input fields */
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        /* Style the error message */
+        .text-danger {
+            color: red;
+            text-align: center;
+        }
+
+        /* Style the login button */
+        button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+{% endblock head %}
+
+{% block body %}
+<header class="header-area header-padding-1 sticky-bar header-res-padding clearfix ">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-2 col-lg-2 col-md-6 col-4">
+{#                <div class="logo">#}
+{#                    <a href="index">#}
+{#                        <img src="{% static 'assets/img/logo/logo.jpg' %}" alt="" width="120" height="55" >#}
+{#                    </a>#}
+{#                </div>#}
+{#            </div>#}
+{#            <div class="col-xl-8 col-lg-8 d-none d-lg-block">#}
+{#                <div class="main-menu">#}
+{#                    <nav>#}
+{#                        <ul>#}
+{#                            <li><a href="index">Home </a>#}
+{#                                #}
+{#                            <!-- <li><a href="shop-grid-fw.php"> Shop </a></li> -->#}
+{#                                #}
+{#                            <!-- <li><a href="shop-grid-fw.php">Collection</a></li> -->#}
+{#                           #}
+{#                            <!-- <li><a href="blog-no-sidebar.html">Deals </a></li> -->#}
+{#                                #}
+{#                            #}
+{#                            <li><a href="about.html"> About </a></li>#}
+{#                            <li><a href="contact"> Contact</a></li>#}
+{#                        </ul>#}
+{#                    </nav>#}
+{#                </div>#}
+{#            </div>#}
+            <div class="col-xl-2 col-lg-2 col-md-6 col-8">
+{#                   <div class="header-right-wrap">#}
+{#                    <div class="same-style header-search">#}
+{#                        <a class="search-active" href="#"><i class="pe-7s-search"></i></a>#}
+{#                        <div class="search-content">#}
+{#                            <form action="#">#}
+{#                                <input type="text" placeholder="Search" />#}
+{#                                <button class="button-search"><i class="pe-7s-search"></i></button>#}
+{#                            </form>#}
+{#                        </div> #}
+{#                    </div>#}
+{#                    <div class="same-style account-satting">#}
+{#                        <a class="account-satting-active" href="#"><i class="pe-7s-users"></i></a>#}
+{#                        <div class="account-dropdown">#}
+{#                            <ul>#}
+{#                                <li><a href="login-register.html">Login</a></li>#}
+{#                                <li><a href="login-register.html">Register</a></li>#}
+{#                                #}
+{#                                #}
+{#                            </ul>#}
+{#                        </div>#}
+{#                    </div>#}
+                    <!-- <div class="same-style header-wishlist">
+                        <a href="#"><i class="pe-7s-like"></i></a>
+                    </div> -->
+{#                    /<div class="same-style cart-wrap">#}
+                        <!-- <button class="icon-cart">
+                            <i class="pe-7s-shopbag"></i>
+                            <span class="count-style">02</span>
+                        </button> -->
+{#                        <div class="shopping-cart-content">#}
+{#                            <div class="shopping-cart-btn btn-hover text-center">#}
+{#                                <a class="default-btn" href="cart-page.php">view cart</a>#}
+{#                               #}
+{#                            </div>#}
+{#                        </div>#}
+{#                    </div>#}
+                </div>
+            </div>
+        </div>
+
+        <div class="mobile-menu-area">
+            <div class="mobile-menu">
+                <nav id="mobile-menu-active">
+                    <ul class="menu-overflow">
+                        <li><a href="index.html">HOME</a>
+
+                                </li>
+
+
+                            </ul>
+                        </li>
+                        <li><a href="shop-grid-fw.html">Shop</a>
+
+                                </li>
+
+                            </ul>
+                        </li>
+                        <li><a href="shop.html">Collection</a></li>
+
+                        <li><a href="l">Blog</a>
+
+                        </li>
+                        <li><a href="about.html">About us</a></li>
+                        <li><a href="contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+{#<div class="breadcrumb-area pt-35 pb-35 bg-purple">#}
+{#    <div class="container">#}
+{#        <div class="breadcrumb-content text-center">#}
+{#            <ul>#}
+{#                <li>#}
+{#                    <a href="index.html">Home</a>#}
+{#                </li>#}
+{#                <li class="active">Account Settings  </li>#}
+{#            </ul>#}
+{#        </div>#}
+{#    </div>#}
+{#</div>#}
+<!-- <div class="login-register-area pt-100 pb-100">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-7 col-md-12 ms-auto me-auto">
+                <div class="login-register-wrapper">
+                    <div class="login-register-tab-list nav">
+                        <a class="active" data-bs-toggle="tab" href="#lg1">
+                            <h4> login </h4>
+                        </a>
+                        <a data-bs-toggle="tab" href="">
+                            <h4> register </h4>
+                        </a>
+
+                        already committed till 157
+                        <a data-bs-toggle="tab" href="#lg3">
+                            <h4>Change Address</h4>
+                        </a>
+                        <br>
+                         <a data-bs-toggle="tab" href="#lg4">
+                            <h4> update product </h4></a>
+                        <a data-bs-toggle="tab" href="#lg5">
+                            <h4> Delete product </h4></a>
+                        till here
+
+                    </div>
+                    <div class="tab-content">
+                        <div id="lg1" class="tab-pane active">
+                            <div class="login-form-container">
+                                <div class="login-register-form">
+                                    <form action="login" id="login-form" method="post">
+                                        {% csrf_token %}
+                                        <input type="text" id= "username" name="username" placeholder="Username">
+                                        <input type="password" id= "password" name="password" placeholder="Password">
+                                        <div class="button-box">
+                                            <div class="login-toggle-btn">
+
+
+                                                <a href="#">Forgot Password?</a> //this line commented already
+                                            </div>
+                                            <button type="submit"><span>Login</span></button>
+                                        </div>
+                                    </form>
+                                        <br/>
+{#                                    <div class="login-register-form">#}
+                                        {% load socialaccount %}
+                                        <a href="{% provider_login_url 'google' %}?next=/">
+                                            <button type="submit"><span>Google Sign IN</span></button>
+                                        </a>
+{#                                    </div>#}
+{#                                    <p class="form-messege"></p>#}
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="lg2" class="tab-pane">
+                            <div class="login-form-container">
+                                <div class="login-register-form">
+                                    <form action="register" id="reg-form"method="post">
+                                        {% csrf_token %}
+                                        <input type="text" name="firstname" placeholder="First Name">
+                                        <input type="text" name="lastname" placeholder="Last Name">
+                                        <input type="text" name="username" placeholder="User name">
+                                        <input type="password" name="password" placeholder="Password">
+                                        <input type="password" name="confirmation" placeholder="Enter Same Password">
+                                        <input name="email" placeholder="Email" type="email">
+                                        <div class="button-box">
+                                            <button type="submit"><span>Register</span></button>
+                                        </div>
+                                    </form>
+{#                                    <p class="form-messege"></p>#}
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<div class="login">
+    <div class="w-sm-25 w-mg-50 text-center">
+        <div class="card-body">
+            <div class="logo">
+                <a href="index">
+                    <img src="{% static 'assets/img/logo/logo_try.jpg' %}" alt="Logo" style="max-width: 100px; margin-bottom: 10px;">
+                </a>
+            </div>
+            <h3>Log into Trip Masters</h3>
+
+            <form action="your-login-endpoint" method="POST" class="my-3">
+                <div class="form-group">
+                    <input type="email" id="email" name="email" class="form-control" required placeholder="Email" />
+                </div>
+                <div class="form-group">
+                    <input type="password" id="password" name="password" class="form-control" required placeholder="Password" />
+                </div>
+
+                <p class="text-danger" id="error"></p>
+
+                <div class="d-flex justify-content-center">
+                    <button type="submit" class="btn btn-primary btn-block text-center">Login</button>
+                </div>
+            </form>
+
+            <p>Need an account? <a href="/signup">Sign Up</a></p>
+
+            <a href="{% provider_login_url 'google' %}?next=/">
+                <button type="submit" class="btn btn-danger btn-block text-center">Google Sign-In</button>
+            </a>
+        </div>
+    </div>
+</div>
+
+{#<footer class="footer-area bg-purple pt-100 pb-70">#}
+{#    <div class="container">#}
+{#        <div class="row">#}
+{#            <div class="col-lg-2 col-md-4 col-sm-4">#}
+{#                <div class="copyright mb-30">#}
+{#                    <div class="footer-logo">#}
+{#                        <a href="index.html">#}
+{#                            <img src="{% static 'assets/img/logo/logo.jpg' %}" alt="" width="120" height="55" >#}
+{#                        </a>#}
+{#                    </div>#}
+{#                    <p>© 2022<a href="#">Chump</a>.<br> All Rights Reserved</p>#}
+{#                </div>#}
+{#            </div>#}
+{#            <div class="col-lg-2 col-md-4 col-sm-4">#}
+{#                <div class="footer-widget mb-30 ml-30">#}
+{#                    <div class="footer-title">#}
+{#                        <h3>ABOUT US</h3>#}
+{#                    </div>#}
+{#                    <div class="footer-list">#}
+{#                        <ul>#}
+{#                            <li><a href="about.html">About us</a></li>#}
+{#                            <li><a href="contact">Store location</a></li>#}
+{#                            <li><a href="contact">Contact</a></li>#}
+{#                            #}
+{#                        </ul>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
+{#            <div class="col-lg-2 col-md-4 col-sm-4">#}
+{#                <div class="footer-widget mb-30 ml-50">#}
+{#                    <div class="footer-title">#}
+{#                        <h3>USEFUL LINKS</h3>#}
+{#                    </div>#}
+{#                    <div class="footer-list">#}
+{#                        <ul>#}
+{#                            #}
+{#                            <li><a href="about.html">Support Policy</a></li>#}
+{#                            #}
+{#                            <li><a href="about.html">FAQs</a></li>#}
+{#                        </ul>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
+{#            <div class="col-lg-2 col-md-6 col-sm-6">#}
+{#                <div class="footer-widget mb-30 ml-75">#}
+{#                    <div class="footer-title">#}
+{#                        <h3>FOLLOW US</h3>#}
+{#                    </div>#}
+{#                    <div class="footer-list">#}
+{#                        <ul>#}
+{#                            <li><a href="#">Facebook</a></li>#}
+{#                            <li><a href="#">Twitter</a></li>#}
+{#                            <li><a href="#">Instagram</a></li>#}
+{#                            <li><a href="#">Youtube</a></li>#}
+{#                        </ul>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
+{#            <div class="col-lg-4 col-md-6 col-sm-6">#}
+{#                <div class="footer-widget mb-30 ml-70">#}
+{#                    <div class="footer-title">#}
+{#                        <h3>SUBSCRIBE</h3>#}
+{#                    </div>#}
+{#                    <div class="subscribe-style">#}
+{#                        <p>Get E-mail updates about our latest shop and special offers.</p>#}
+{#                        <div id="mc_embed_signup" class="subscribe-form">#}
+{#                            <form action="subscribe.html" method="get" target="_blank">#}
+{#                                <div id="mc_embed_signup_scroll" class="mc-form">#}
+{#                                    <input class="email" type="email" required="" placeholder="Enter your email here.." name="EMAIL" value="">#}
+{#                                    <div class="mc-news" aria-hidden="true">#}
+{#                                        <input type="text" value="" tabindex="-1" name="b_6bbb9b6f5827bd842d9640c82_05d85f18ef">#}
+{#                                    </div>#}
+{#                                    <div class="clear">#}
+{#                                        <input id="mc-embedded-subscribe" class="button" type="submit" name="subscribe" value="subscribe" >#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                            </form>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+{#    </div>#}
+{#</footer>#}
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- All JS is here
+============================================ -->
+
+<script src="{% static 'assets/js/vendor/modernizr-3.11.7.min.js' %}"></script>
+<script src="{% static 'assets/js/vendor/jquery-v3.6.0.min.js' %}"></script>
+<script src="{% static 'assets/js/vendor/jquery-migrate-v3.3.2.min.js' %}"></script>
+<script src="{% static 'assets/js/vendor/popper.min.js' %}"></script>
+<script src="{% static 'assets/js/vendor/bootstrap.min.js' %}"></script>
+<script src="{% static 'assets/js/plugins.js' %}"></script>
+<!-- Ajax reg-->
+<script src="{% static 'assets/js/ajax-mail.js' %}"></script>
+<script src="{% static 'assets/js/ajax-reg.js' %}"></script>
+<script src="{% static 'assets/js/ajax-address.js' %}"></script>
+<script src="{% static 'assets/js/ajax-login.js' %}"></script>
+<script src="{% static 'assets/js/ajax-product.js' %}"></script>
+<script src="{% static 'assets/js/ajax-del.js' %}"></script>
+<!-- Main JS -->
+<script src="{% static 'assets/js/main.js' %}"></script>
+
+{% endblock%}

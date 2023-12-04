@@ -1,0 +1,46 @@
+{% extends 'itinerary/home_iti.html' %}
+{% block content %}
+    <style>
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .card {
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            transition: 0.3s;
+        }
+        .card:hover {
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        }
+        .card-title {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .card-text {
+            font-size: 18px;
+            line-height: 1.5;
+        }
+    </style>
+
+    <br>
+    <div class="container">
+        <h2>Review for rating</h2>
+        <h4>{{ message }}</h4>
+        {% for item in response %}
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">Place: {{ item.place }}</h5>
+                    <p class="card-text">Review: {{ item.review }}</p>
+                    <p class="card-text">Rating: {{ item.rating }}</p>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+{% endblock %}

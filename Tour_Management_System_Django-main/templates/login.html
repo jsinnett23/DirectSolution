@@ -1,0 +1,384 @@
+{% load static %}
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Trip Master | Login/Register</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'assets/img/favicon.png' %}">
+
+    <!-- CSS
+	============================================ -->
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+    <!-- Icon Font CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/icons.min.css' %}">
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/plugins.css' %}">
+    <!-- Main Style CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+</head>
+
+<body>
+<header class="header-area header-padding-1 sticky-bar header-res-padding clearfix ">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-2 col-lg-2 col-md-6 col-4">
+                <div class="logo">
+                    <a href="index">
+                        <img src="{% static 'assets/img/logo/logo.jpg' %}" alt="" width="120" height="55" >
+                    </a>
+                </div>
+            </div>
+            <div class="col-xl-8 col-lg-8 d-none d-lg-block">
+                <div class="main-menu">
+                    <nav>
+                        <ul>
+                            <li><a href="index">Home </a>
+
+                            <!-- <li><a href="shop-grid-fw.php"> Shop </a></li> -->
+
+                            <!-- <li><a href="shop-grid-fw.php">Collection</a></li> -->
+
+                            <!-- <li><a href="blog-no-sidebar.html">Deals </a></li> -->
+
+
+                            <li><a href="about.html"> About </a></li>
+                            <li><a href="contact"> Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="col-xl-2 col-lg-2 col-md-6 col-8">
+                   <div class="header-right-wrap">
+                    <div class="same-style header-search">
+                        <a class="search-active" href="#"><i class="pe-7s-search"></i></a>
+                        <div class="search-content">
+                            <form action="#">
+                                <input type="text" placeholder="Search" />
+                                <button class="button-search"><i class="pe-7s-search"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="same-style account-satting">
+                        <a class="account-satting-active" href="#"><i class="pe-7s-users"></i></a>
+                        <div class="account-dropdown">
+                            <ul>
+                                <li><a href="login-register.html">Login</a></li>
+                                <li><a href="login-register.html">Register</a></li>
+
+
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- <div class="same-style header-wishlist">
+                        <a href="#"><i class="pe-7s-like"></i></a>
+                    </div> -->
+                    <div class="same-style cart-wrap">
+                        <!-- <button class="icon-cart">
+                            <i class="pe-7s-shopbag"></i>
+                            <span class="count-style">02</span>
+                        </button> -->
+                        <div class="shopping-cart-content">
+                            <div class="shopping-cart-btn btn-hover text-center">
+                                <a class="default-btn" href="cart-page.php">view cart</a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mobile-menu-area">
+            <div class="mobile-menu">
+                <nav id="mobile-menu-active">
+                    <ul class="menu-overflow">
+                        <li><a href="index.html">HOME</a>
+
+                                </li>
+
+
+                            </ul>
+                        </li>
+                        <li><a href="shop-grid-fw.html">Shop</a>
+
+                                </li>
+
+                            </ul>
+                        </li>
+                        <li><a href="shop.html">Collection</a></li>
+
+                        <li><a href="l">Blog</a>
+
+                        </li>
+                        <li><a href="about.html">About us</a></li>
+                        <li><a href="contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+{#<div class="breadcrumb-area pt-35 pb-35 bg-purple">#}
+{#    <div class="container">#}
+{#        <div class="breadcrumb-content text-center">#}
+{#            <ul>#}
+{#                <li>#}
+{#                    <a href="index.html">Home</a>#}
+{#                </li>#}
+{#                <li class="active">Account Settings  </li>#}
+{#            </ul>#}
+{#        </div>#}
+{#    </div>#}
+{#</div>#}
+<div class="login-register-area pt-100 pb-100">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-7 col-md-12 ms-auto me-auto">
+                <div class="login-register-wrapper">
+                    <div class="login-register-tab-list nav">
+                        <a class="active" data-bs-toggle="tab" href="#lg1">
+                            <h4> login </h4>
+                        </a>
+                        <a data-bs-toggle="tab" href="#lg2">
+                            <h4> register </h4>
+                        </a>
+                        <!--<a data-bs-toggle="tab" href="#lg3">
+                            <h4>Change Address</h4>
+                        </a>
+                        <br>
+                         <a data-bs-toggle="tab" href="#lg4">
+                            <h4> update product </h4></a>
+                        <a data-bs-toggle="tab" href="#lg5">
+                            <h4> Delete product </h4></a> -->
+
+
+                    </div>
+                    <div class="tab-content">
+                        <div id="lg1" class="tab-pane active">
+                            <div class="login-form-container">
+                                <div class="login-register-form">
+                                    <form action="login" id="login-form" method="post">
+                                        {% csrf_token %}
+                                        <input type="text" id= "username" name="username" placeholder="Username">
+                                        <input type="password" id= "password" name="password" placeholder="Password">
+                                        <div class="button-box">
+                                            <div class="login-toggle-btn">
+
+
+                                                <!-- <a href="#">Forgot Password?</a> -->
+                                            </div>
+                                            <button type="submit"><span>Login</span></button>
+                                        </div>
+                                    </form>
+{#                                    <p class="form-messege"></p> <!-- #deepak added  -->#}
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="lg2" class="tab-pane">
+                            <div class="login-form-container">
+                                <div class="login-register-form">
+                                    <form action="{% static 'assets/php/reg_db.php' %}" id="reg-form"method="post">
+                                        <input type="text" name="name" placeholder="Username">
+                                        <input type="password" name="password" placeholder="Password">
+                                        <input name="email" placeholder="Email" type="email">
+                                        <div class="button-box">
+                                            <button type="submit"><span>Register</span></button>
+                                        </div>
+                                    </form>
+                                    <p class="form-messege"></p> <!-- #deepak added  -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="lg3" class="tab-pane">
+                            <div class="login-form-container">
+                                <div class="login-register-form">
+                                    <form action="{% static 'assets/php/address_db.php' %}" id="address-form"method="post">
+                                        <input type="text" name="address" placeholder="Enter Address Line 1">
+                                        <input type="text-center" name="city" placeholder="City">
+                                        <input type="text" name="state" placeholder="State">
+                                        <input type="text" name="zip" placeholder="Zip Code">
+
+                                        <div class="button-box">
+                                            <button type="submit"><span>Change Address</span></button>
+                                        </div>
+                                    </form>
+                                    <p class="form-messege"></p> <!-- #deepak added  -->
+                                </div>
+                            </div>
+                        </div>
+
+
+                         <div id="lg4" class="tab-pane">
+                            <div class="login-form-container">
+                                <div class="login-register-form">
+                                    <form action="{% static 'assets/php/product_db.php' %}" id="product-form" method="post">
+                                        <input type="text" name="id" placeholder="ID">
+                                        <input type="text" name="productname" placeholder="Product Name ">
+                                        <input type="text" name="productprice" placeholder="Product price">
+                                        <input type="text" name="path" placeholder="Product image path">
+                                        <div class="button-box">
+                                            <button type="submit"><span>Add Product</span></button>
+                                        </div>
+
+
+                                    </form>
+                                    <p class="form-messege"></p> <!-- #deepak added  -->
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div id="lg5" class="tab-pane">
+                            <div class="login-form-container">
+                                <div class="login-register-form">
+                                    <form action="{% static 'assets/php/del_db.php' %}" id="del-form" method="post">
+                                        <input type="text" name="id" placeholder="ID">
+
+                                        <div class="button-box">
+                                            <button type="submit"><span>delete Product</span></button>
+                                        </div>
+
+
+                                    </form>
+                                    <p class="form-messege"></p> <!-- #deepak added  -->
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="footer-area bg-purple pt-100 pb-70">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-2 col-md-4 col-sm-4">
+                <div class="copyright mb-30">
+                    <div class="footer-logo">
+                        <a href="index.html">
+                            <img src="{% static 'assets/img/logo/logo.jpg' %}" alt="" width="120" height="55" >
+                        </a>
+                    </div>
+                    <p>© 2022<a href="#">Chump</a>.<br> All Rights Reserved</p>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-4">
+                <div class="footer-widget mb-30 ml-30">
+                    <div class="footer-title">
+                        <h3>ABOUT US</h3>
+                    </div>
+                    <div class="footer-list">
+                        <ul>
+                            <li><a href="about.html">About us</a></li>
+                            <li><a href="contact">Store location</a></li>
+                            <li><a href="contact">Contact</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-4">
+                <div class="footer-widget mb-30 ml-50">
+                    <div class="footer-title">
+                        <h3>USEFUL LINKS</h3>
+                    </div>
+                    <div class="footer-list">
+                        <ul>
+
+                            <li><a href="about.html">Support Policy</a></li>
+
+                            <li><a href="about.html">FAQs</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-6 col-sm-6">
+                <div class="footer-widget mb-30 ml-75">
+                    <div class="footer-title">
+                        <h3>FOLLOW US</h3>
+                    </div>
+                    <div class="footer-list">
+                        <ul>
+                            <li><a href="#">Facebook</a></li>
+                            <li><a href="#">Twitter</a></li>
+                            <li><a href="#">Instagram</a></li>
+                            <li><a href="#">Youtube</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="footer-widget mb-30 ml-70">
+                    <div class="footer-title">
+                        <h3>SUBSCRIBE</h3>
+                    </div>
+                    <div class="subscribe-style">
+                        <p>Get E-mail updates about our latest shop and special offers.</p>
+                        <div id="mc_embed_signup" class="subscribe-form">
+                            <form action="subscribe.html" method="get" target="_blank">
+                                <div id="mc_embed_signup_scroll" class="mc-form">
+                                    <input class="email" type="email" required="" placeholder="Enter your email here.." name="EMAIL" value="">
+                                    <div class="mc-news" aria-hidden="true">
+                                        <input type="text" value="" tabindex="-1" name="b_6bbb9b6f5827bd842d9640c82_05d85f18ef">
+                                    </div>
+                                    <div class="clear">
+                                        <input id="mc-embedded-subscribe" class="button" type="submit" name="subscribe" value="subscribe" >
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- All JS is here
+============================================ -->
+
+<script src="{% static 'assets/js/vendor/modernizr-3.11.7.min.js' %}"></script>
+<script src="{% static 'assets/js/vendor/jquery-v3.6.0.min.js' %}"></script>
+<script src="{% static 'assets/js/vendor/jquery-migrate-v3.3.2.min.js' %}"></script>
+<script src="{% static 'assets/js/vendor/popper.min.js' %}"></script>
+<script src="{% static 'assets/js/vendor/bootstrap.min.js' %}"></script>
+<script src="{% static 'assets/js/plugins.js' %}"></script>
+<!-- Ajax reg-->
+<script src="{% static 'assets/js/ajax-mail.js' %}"></script>
+<script src="{% static 'assets/js/ajax-reg.js' %}"></script>
+<script src="{% static 'assets/js/ajax-address.js' %}"></script>
+<script src="{% static 'assets/js/ajax-login.js' %}"></script>
+<script src="{% static 'assets/js/ajax-product.js' %}"></script>
+<script src="{% static 'assets/js/ajax-del.js' %}"></script>
+<!-- Main JS -->
+<script src="{% static 'assets/js/main.js' %}"></script>
+
+</body>
+
+</html>

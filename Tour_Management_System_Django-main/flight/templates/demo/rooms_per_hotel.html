@@ -1,0 +1,188 @@
+{% extends 'flight/layout.html' %}
+{% load static %}
+{% block head %}
+    <script type="text/javascript" src="{% static 'js/index.js' %}"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'assets/img/favicon.png' %}">
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Trip Master | Login/Register</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+    <!-- Icon Font CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/icons.min.css' %}">
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/plugins.css' %}">
+    <!-- Main Style CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+
+{#    <meta charset="utf-8">#}
+{#    <meta http-equiv="x-ua-compatible" content="ie=edge">#}
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'assets/img/favicon.png'%}">
+
+    <!-- CSS
+	============================================ -->
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+    <!-- Icon Font CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/icons.min.css' %}">
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/plugins.css' %}">
+    <!-- Main Style CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static 'demo/style.css' %}">
+    <meta charset="UTF-8">
+    <title>Book Room</title>
+
+    <style>
+        body {
+            background-color: #f5f5f5; /* Light gray background */
+            color: #34495e; /* Dark gray text color */
+            font-family: 'Arial', sans-serif; /* Use a suitable font */
+        }
+        .login-heading {
+            font-size: 36px;
+            color: #3498db; /* Blue color for headings */
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+        }
+        .card {
+            margin-bottom: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s;
+        }
+        .card:hover {
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+        .card-header {
+            background-color: #2ecc71; /* Green color for headers */
+            border-bottom: none;
+            font-weight: bold;
+            font-size: 24px;
+            color: #ecf0f1; /* Light gray text color on headers */
+        }
+        .card-body {
+            background-color: #ecf0f1; /* Light gray background for body */
+            color: #34495e; /* Dark gray text color in body */
+        }
+        .card-text {
+            font-size: 18px;
+        }
+        .btn {
+            font-weight: bold;
+            font-size: 20px;
+            padding: 10px 25px;
+            border-radius: 5px;
+        }
+        .btn-warning {
+            background-color: #3498db; /* Blue color for buttons */
+            border-color: #3498db;
+            color: #ecf0f1; /* Light gray text color on buttons */
+        }
+        .btn-warning:hover {
+            background-color: #2980b9; /* Darker blue color on hover */
+            border-color: #2980b9;
+        }
+    </style>
+
+
+{% endblock head %}
+
+{% block body %}
+<style>
+    /* CSS for header */
+    .login-heading {
+        font-size: 23px;
+        color: darkred;
+        font-weight: bold;
+        /* text-align: center; */
+    }
+
+    /* CSS for card header */
+    .card-header {
+        font-size: 22px;
+        color: darkred;
+        font-weight: bold;
+        /* {#text-align: center;#} */
+    }
+
+    /* CSS for Book Room button */
+    .btn-book-room {
+        font-size: 18px;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-left: 10px;
+    }
+    table {
+  margin: 0 auto;
+}
+</style>
+
+<h3 class="login-heading mb-4 mt-4">{{ origin }}<br>{{ departureDate }}
+    {% if returnDate %} <span class="text-info">&#10594;&#10596;</span> {{ returnDate }}{% endif %}
+</h3>
+
+{#<div class="modal-body row">#}
+{#    <div class="col-md-12 offset-3">#}
+        <h3 class="login-heading mb-4 mt-4 pl-3">{{ origin }}<br>{{ departureDate }}
+{% if returnDate %} <span class="text-info">&#10594;&#10596;</span> {{ returnDate }}{% endif %}</h3>
+
+
+<div class="card-columns">
+    {% for r in response %}
+        <div class="card mb-3">
+            <div class="card-body">
+                <h5 class="card-title">Offer ID: {{ r.offerID }}</h5>
+                <p class="card-text">Price: ${{ r.price }}</p>
+                <a href="{% url 'book_hotel' r.offerID r.price name checkInDate checkOutDate %}" class="btn btn-warning btn-lg text-uppercase font-weight-normal mb-2">Book Room</a>
+            </div>
+        </div>
+        <div class="card border-info mb-3">
+            <div class="card-body">
+                <h5 class="card-title text-info">F.Y.I.</h5>
+                <p class="card-text">{{ r.description }}</p>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+
+
+
+<br/><br/><br/><br/><br/><br/>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+<script>
+        $(document).ready(function(){
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+</script>
+
+<script src="{% static 'assets/js/vendor/modernizr-3.11.7.min.js' %}"></script>
+<script src="{% static 'assets/js/vendor/jquery-v3.6.0.min.js' %}"></script>
+<script src="{% static 'assets/js/vendor/jquery-migrate-v3.3.2.min.js' %}"></script>
+<script src="{% static 'assets/js/vendor/popper.min.js' %}"></script>
+<script src="{% static 'assets/js/vendor/bootstrap.min.js' %}"></script>
+<script src="{% static 'assets/js/plugins.js' %}"></script>
+<!-- Ajax Mail -->
+<script src="{% static 'assets/js/ajax-mail.js' %}"></script>
+<script src="{% static 'assets/js/ajax-acc.js' %}"></script>
+<script src="{% static 'assets/js/ajax-reg.js' %}"></script>
+<!-- Main JS -->
+<script src="{% static 'assets/js/main.js' %}"></script>
+{% endblock%}

@@ -1,0 +1,60 @@
+{% extends 'flight/layout.html' %}
+
+{% load static %}
+
+{% block head %}
+    <title>Review and rating</title>
+    <script type="text/javascript" src="{% static 'js/index1.js' %}"></script>
+{% endblock head %}
+
+{% block body %}
+    <section class="section first-section" style="background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url('{% static 'img/plane3.12.jpg'%}');">
+        <div class="banner-div">
+            <div class="banner">
+                <h1 class="banner-text">Give Rating and Review</h1>
+            </div>
+        </div>
+
+        <div class="search-flight">
+            <div class="container">
+                <form class="search-flight-form" action="submit_iti" method="post">
+                    <div class="align-items-center">
+                        <div class="search-flight-form-data">
+                            <div class="input-row" style="display: flex;">
+                            </div>
+                            <div class="input-row">
+                                <label for="flight-from">Place </label>
+                                <input type="text" name="Origin" placeholder="From" id="flight-from" class="form-control mr-sm-3" onblur="hideplaces(this)" data-value="{{origin | lower}}" data-list="places_from" autocomplete="off" value="{{origin | upper}}">
+                                <div id="places_from" class="places_box">
+                                    <!-- Place options here -->
+                                </div>
+                            </div>
+
+                            <!-- New Fields for Review and Rating -->
+                            <div class="input-row">
+                                <label for="review">Review</label>
+                                <input type="text" name="review" placeholder="Your review" id="review" class="form-control" required>
+                            </div>
+                            <div class="input-row">
+                                <label for="rating">Rating</label>
+                                <select name="rating" id="rating" class="form-control" required>
+                                    <option value="1">1 star</option>
+                                    <option value="2">2 stars</option>
+                                    <option value="3">3 stars</option>
+                                    <option value="4">4 stars</option>
+                                    <option value="5">5 stars</option>
+                                </select>
+                            </div>
+                            <!-- End of New Fields -->
+
+                            <div class="input-row">
+                                <button type="submit" class="btn btn-danger">Rate</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+{% endblock%}

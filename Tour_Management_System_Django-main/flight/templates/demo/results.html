@@ -1,0 +1,108 @@
+{% extends 'flight/layout.html' %}
+{% load static %}
+{% block head %}
+    <script type="text/javascript" src="{% static 'js/index.js' %}"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'assets/img/favicon.png' %}">
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Trip Master | Login/Register</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+    <!-- Icon Font CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/icons.min.css' %}">
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/plugins.css' %}">
+    <!-- Main Style CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'assets/img/favicon.png'%}">
+
+    <!-- CSS
+	============================================ -->
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+    <!-- Icon Font CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/icons.min.css' %}">
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/plugins.css' %}">
+    <!-- Main Style CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static 'demo/style.css' %}">
+    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+    <title>Tourmate Hotel Result</title>
+{% endblock head %}
+
+{% block body %}
+
+
+<h3 class="login-heading mb-4 " style="color:deeppink; text-align: center;">Findings for {{ origin }}</h3>
+        <table class="table table-bordered table-hover" style="border: 2px solid black;">
+            <thead style="background-color:deeppink;">
+                <tr style="border: 2px solid black;">
+                    <th style="border: 2px solid black;">Name</th>
+                    <th style="border: 2px solid black;">Address</th>
+                    <th style="border: 2px solid black;">Price</th>
+                    <th style="border: 2px solid black;"></th>
+                </tr>
+            </thead>
+            <tbody style="background-color: mistyrose;">
+                {% for r, hotel in response %}
+                    <tr style="border: 2px solid black;">
+                        <td style="border: 2px solid black;font-weight: bold;">{{ r.name }}</td>
+                        <td style="border: 2px solid black;font-weight: bold;">{{ r.address }}</td>
+                        <td style="border: 2px solid black;font-weight: bold;">${{ r.price }}</td>
+                        <td style="border: 2px solid black;font-weight: bold;"><a href="{% url 'rooms_per_hotel' r.hotelID departureDate returnDate %}" class="btn btn-warning btn-lg text-uppercase " style="background-color: deeppink;font-size: 14px;font-weight: bold;">Explore Rooms</a></td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    <br/><br/><br/><br/><br/><br/>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+<script>
+        $(document).ready(function(){
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+</script>
+
+<script src="{% static 'assets/js/vendor/modernizr-3.11.7.min.js' %}"></script>
+<script src="{% static 'assets/js/vendor/jquery-v3.6.0.min.js' %}"></script>
+<script src="{% static 'assets/js/vendor/jquery-migrate-v3.3.2.min.js' %}"></script>
+<script src="{% static 'assets/js/vendor/popper.min.js' %}"></script>
+<script src="{% static 'assets/js/vendor/bootstrap.min.js' %}"></script>
+<script src="{% static 'assets/js/plugins.js' %}"></script>
+<!-- Ajax Mail -->
+<script src="{% static 'assets/js/ajax-mail.js' %}"></script>
+<script src="{% static 'assets/js/ajax-acc.js' %}"></script>
+<script src="{% static 'assets/js/ajax-reg.js' %}"></script>
+<!-- Main JS -->
+<script src="{% static 'assets/js/main.js' %}"></script>
+{% endblock%}
