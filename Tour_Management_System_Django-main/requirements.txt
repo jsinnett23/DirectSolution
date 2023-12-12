@@ -71,4 +71,4 @@ xhtml2pdf==0.2.10
 yarl==1.9.1
 dj-database-url==0.5.0
 django-cors-headers==3.10.1
-whitenoise = 5.3.0
+whitenoise==5.3.0
